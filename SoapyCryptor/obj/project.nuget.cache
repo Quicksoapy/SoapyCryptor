@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+UMEMA+s7dzt7JvXss4dvrzog5XC9TnZuNuQbfmALr6qw3iWBZVlSRxVXdQgaJf94rvW/j36uoDk1sQ8AcpteQ==",
+  "dgSpecHash": "fkbykayVH4Ehh5K6KHsLB1a246TZmeFsLjquz61X7MJ37uJcJVYAlpgIkYn5gIqvyjAWebarJKbsgoaHF+7W3Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gamin\\Documents\\GitHub\\SoapyCryptor\\SoapyCryptor\\SoapyCryptor.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Gamin\\.nuget\\packages\\commandlineparser\\2.9.0-preview1\\commandlineparser.2.9.0-preview1.nupkg.sha512"
+  ],
   "logs": []
 }
