@@ -17,6 +17,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/61F5185B-E9CF-48B9-8487-181D7861EB9C/E2/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/61F5185B-E9CF-48B9-8487-181D7861EB9C/70/Char.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/61F5185B-E9CF-48B9-8487-181D7861EB9C/2B3/CastHelpers.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -69,7 +70,8 @@
       <updated>1620299134781</updated>
       <workItem from="1620299170377" duration="6597000" />
       <workItem from="1620368712140" duration="5369000" />
-      <workItem from="1620378745739" duration="2015000" />
+      <workItem from="1620378745739" duration="2041000" />
+      <workItem from="1620384575003" duration="2745000" />
     </task>
     <servers />
   </component>

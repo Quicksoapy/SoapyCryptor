@@ -75,11 +75,13 @@ namespace SoapyCryptor
                     output = output.Replace(result[j].Split(" = ")[1], result[j].Split(" = ")[0]);
                 }
                 Console.WriteLine("The encrypted text: \n" + output);
+                File.WriteAllText("encrypted.txt",output);
             }
             else
             {
                 Console.WriteLine("Please enter what you'd like to decrypt:");
-                string userInput = Console.ReadLine();
+                string userInputReadLine = Console.ReadLine();
+                string userInput = File.ReadAllText(userInputReadLine);
                 Console.WriteLine("Paste the address of your key here:");
                 string textKey = Console.ReadLine();
                 string inputKey = File.ReadAllText(textKey);
@@ -93,19 +95,16 @@ namespace SoapyCryptor
                     messageChars.Add(messageChar);
                 }
 
-                string output = userInput;
-                for (int j = 0; j < keyChars.Count; j++)
-                {
-                    output = output.Replace(keyChars[j], messageChars[j]);
-                }
-
+                string output = null;
                 int messNmbr = 0;
-                foreach (var thing in output)
+                foreach (var thing in userInput)
                 {
-                    if (keyChars.Contains(thing.ToString()))
+                    for (int i = 0; i < keyChars.Count; i++)
                     {
-                        output[messNmbr] = messageChars[messNmbr];
-                        messNmbr += 1;
+                        if (keyChars[i] == thing.ToString())
+                        {
+                            output += messageChars[i];
+                        }
                     }
                 }
                 Console.WriteLine(output);
