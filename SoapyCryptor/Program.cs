@@ -4,6 +4,7 @@ using System.ComponentModel.Design;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Security.Cryptography;
+using System.Text;
 using System.Text.RegularExpressions;
 using MiscUtil.IO;
 using static System.String;
@@ -20,6 +21,7 @@ namespace SoapyCryptor
             List<int> randomNumbers = new List<int>();
             List<char> userCharacters = new List<char>();
             string ASCII = "\"!#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvxyz{|©}»¯~ž½·¾±º®¼¹¶³µ§²«°ª¬Ÿ¥¨£¦¡¢¤Š™œ›š—–•ŒŽ‹‰€ƒˆ„‡†…";
+            Console.WriteLine(ASCII.Length);
             while (true)
             {
                 var encryptordecrypt = Console.ReadLine().Trim();
@@ -43,6 +45,7 @@ namespace SoapyCryptor
             {
                 Console.WriteLine("Please enter what you'd like to encrypt:");
                 string userInput = Console.ReadLine();
+                Dictionary<char, int> dictionary = new Dictionary<char, int>();
                 for (int i = 0; i < userInput.Length; i++)
                 {
                     if (!userCharacters.Contains(userInput[i]))
@@ -51,12 +54,13 @@ namespace SoapyCryptor
                     }
                 }
                 List<string> result = new List<string>();
+                
                 for (int i = 0; i < userCharacters.Count; i++)
                 {
                     int rnd = 0;
                     while (randomNumbers.Contains(rnd))
                     {
-                        rnd = RandomNumberGenerator.GetInt32(0, 142);
+                        rnd = RandomNumberGenerator.GetInt32(0, 141);
                     }
                     randomNumbers.Add(rnd);
                     result.Add(ASCII[randomNumbers[i]] + " = " + userCharacters[i]);
@@ -70,10 +74,20 @@ namespace SoapyCryptor
                 }
                 File.WriteAllText("key.txt", writtenResult);
                 string output = userInput;
-                for (int j = 0; j < userCharacters.Count; j++)
+                var sb = new StringBuilder();
+                foreach (var c in userInput.ToCharArray())
                 {
-                    output = output.Replace(result[j].Split(" = ")[1], result[j].Split(" = ")[0]);
+                    var i = 0;
+                    for (int j = 0; j < userCharacters.Count; j++)
+                    {
+                        if (userCharacters[j] == c)
+                        {
+                            i = j;
+                        }
+                    }
+                    sb.Append(result[i].Split(" = ")[0]);
                 }
+                output = sb.ToString();
                 Console.WriteLine("The encrypted text: \n" + output);
                 File.WriteAllText("encrypted.txt",output);
             }
