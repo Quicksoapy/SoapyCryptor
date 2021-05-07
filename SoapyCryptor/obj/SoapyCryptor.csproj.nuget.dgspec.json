@@ -46,6 +46,10 @@
             "CommandLineParser": {
               "target": "Package",
               "version": "[2.9.0-preview1, )"
+            },
+            "JonSkeet.MiscUtil": {
+              "target": "Package",
+              "version": "[0.2.0, )"
             }
           },
           "imports": [

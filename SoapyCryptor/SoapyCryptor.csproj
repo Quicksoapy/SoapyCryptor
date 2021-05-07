@@ -7,6 +7,7 @@
 
     <ItemGroup>
       <PackageReference Include="CommandLineParser" Version="2.9.0-preview1" />
+      <PackageReference Include="JonSkeet.MiscUtil" Version="0.2.0" />
     </ItemGroup>
 
 </Project>

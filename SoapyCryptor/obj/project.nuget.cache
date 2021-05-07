@@ -1,10 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "fkbykayVH4Ehh5K6KHsLB1a246TZmeFsLjquz61X7MJ37uJcJVYAlpgIkYn5gIqvyjAWebarJKbsgoaHF+7W3Q==",
+  "dgSpecHash": "iyInnH6mWdsOb/rSoZsDGMp5TDPJVPM2eITfLp4qpvDyQ69aUCGcLdAzOBO2dSbb28i/dbaJJ5fA49EtJ8JRWQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Gamin\\Documents\\GitHub\\SoapyCryptor\\SoapyCryptor\\SoapyCryptor.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Gamin\\.nuget\\packages\\commandlineparser\\2.9.0-preview1\\commandlineparser.2.9.0-preview1.nupkg.sha512"
+    "C:\\Users\\Gamin\\.nuget\\packages\\commandlineparser\\2.9.0-preview1\\commandlineparser.2.9.0-preview1.nupkg.sha512",
+    "C:\\Users\\Gamin\\.nuget\\packages\\jonskeet.miscutil\\0.2.0\\jonskeet.miscutil.0.2.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JonSkeet.MiscUtil 0.2.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JonSkeet.MiscUtil",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

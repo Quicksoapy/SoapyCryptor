@@ -10,6 +10,15 @@
         "runtime": {
           "lib/netstandard2.0/CommandLine.dll": {}
         }
+      },
+      "JonSkeet.MiscUtil/0.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/net35/MiscUtil.dll": {}
+        },
+        "runtime": {
+          "lib/net35/MiscUtil.dll": {}
+        }
       }
     }
   },
@@ -35,11 +44,25 @@
         "lib/netstandard2.0/CommandLine.dll",
         "lib/netstandard2.0/CommandLine.xml"
       ]
+    },
+    "JonSkeet.MiscUtil/0.2.0": {
+      "sha512": "eKBBJzfVay4k1sQel05N1NyzmglO3TEhQ1K9nSqXxiVcpAXFF4y5sNFJQTxhQ4ZoM5+O0x0EasitbGKDL63yNA==",
+      "type": "package",
+      "path": "jonskeet.miscutil/0.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jonskeet.miscutil.0.2.0.nupkg.sha512",
+        "jonskeet.miscutil.nuspec",
+        "lib/net35/MiscUtil.dll",
+        "lib/net35/MiscUtil.xml"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "CommandLineParser >= 2.9.0-preview1"
+      "CommandLineParser >= 2.9.0-preview1",
+      "JonSkeet.MiscUtil >= 0.2.0"
     ]
   },
   "packageFolders": {
@@ -88,6 +111,10 @@
           "CommandLineParser": {
             "target": "Package",
             "version": "[2.9.0-preview1, )"
+          },
+          "JonSkeet.MiscUtil": {
+            "target": "Package",
+            "version": "[0.2.0, )"
           }
         },
         "imports": [
@@ -108,5 +135,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'JonSkeet.MiscUtil 0.2.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "JonSkeet.MiscUtil",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }
