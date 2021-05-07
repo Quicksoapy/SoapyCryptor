@@ -21,7 +21,6 @@ namespace SoapyCryptor
             List<int> randomNumbers = new List<int>();
             List<char> userCharacters = new List<char>();
             string ASCII = "\"!#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvxyz{|©}»¯~ž½·¾±º®¼¹¶³µ§²«°ª¬Ÿ¥¨£¦¡¢¤Š™œ›š—–•ŒŽ‹‰€ƒˆ„‡†…";
-            Console.WriteLine(ASCII.Length);
             while (true)
             {
                 var encryptordecrypt = Console.ReadLine().Trim();
@@ -77,15 +76,15 @@ namespace SoapyCryptor
                 var sb = new StringBuilder();
                 foreach (var c in userInput.ToCharArray())
                 {
-                    var i = 0;
-                    for (int j = 0; j < userCharacters.Count; j++)
+                    string encodedCharacter = Empty;
+                    foreach (var s in result)
                     {
-                        if (userCharacters[j] == c)
+                        if (s.Split(" = ")[1] == c.ToString())
                         {
-                            i = j;
+                            encodedCharacter = s.Split(" = ")[0];
                         }
                     }
-                    sb.Append(result[i].Split(" = ")[0]);
+                    sb.Append(encodedCharacter);
                 }
                 output = sb.ToString();
                 Console.WriteLine("The encrypted text: \n" + output);
