@@ -19,7 +19,7 @@ namespace SoapyCryptor
             bool userPick = true;
             List<int> randomNumbers = new List<int>();
             List<char> userCharacters = new List<char>();
-            string ASCII = " \"!#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvxyz{|©}»¯~ž½·¾±º®¼¹¶³µ§²«°ª¬Ÿ¥¨£¦¡¢¤Š™œ›š—–•ŒŽ‹‰€ƒˆ„‡†…";
+            string ASCII = "\"!#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvxyz{|©}»¯~ž½·¾±º®¼¹¶³µ§²«°ª¬Ÿ¥¨£¦¡¢¤Š™œ›š—–•ŒŽ‹‰€ƒˆ„‡†…";
             while (true)
             {
                 var encryptordecrypt = Console.ReadLine().Trim();
@@ -80,24 +80,33 @@ namespace SoapyCryptor
             {
                 Console.WriteLine("Please enter what you'd like to decrypt:");
                 string userInput = Console.ReadLine();
-                Console.WriteLine("Paste your key here:");
-                string inputKey = Console.ReadLine();
+                Console.WriteLine("Paste the address of your key here:");
+                string textKey = Console.ReadLine();
+                string inputKey = File.ReadAllText(textKey);
                 List<string> keyChars = new List<string>();
                 List<string> messageChars = new List<string>();
-                int i = 0;
                 foreach (string line in new LineReader(() => new StringReader(inputKey)))
                 {
                     string keyChar = line.Split(" = ")[0];
                     string messageChar = line.Split(" = ")[1];
-                    keyChars[i] += keyChar;
-                    messageChars[i] += messageChar;
-                    i += 1;
+                    keyChars.Add(keyChar);
+                    messageChars.Add(messageChar);
                 }
 
-                string output = null;
+                string output = userInput;
                 for (int j = 0; j < keyChars.Count; j++)
                 {
-                    output = Regex.Replace(userInput, keyChars[j], messageChars[j]);
+                    output = output.Replace(keyChars[j], messageChars[j]);
+                }
+
+                int messNmbr = 0;
+                foreach (var thing in output)
+                {
+                    if (keyChars.Contains(thing.ToString()))
+                    {
+                        output[messNmbr] = messageChars[messNmbr];
+                        messNmbr += 1;
+                    }
                 }
                 Console.WriteLine(output);
             }

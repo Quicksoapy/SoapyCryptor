@@ -7,14 +7,6 @@
     <list default="true" id="90932c54-1d94-4623-b688-1bf83349489d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.SoapyCryptor/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SoapyCryptor/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SoapyCryptor/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SoapyCryptor/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoapyCryptor/SoapyCryptor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SoapyCryptor/SoapyCryptor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoapyCryptor/obj/Debug/net5.0/SoapyCryptor.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SoapyCryptor/obj/Debug/net5.0/SoapyCryptor.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoapyCryptor/obj/Debug/net5.0/SoapyCryptor.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SoapyCryptor/obj/Debug/net5.0/SoapyCryptor.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoapyCryptor/obj/SoapyCryptor.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/SoapyCryptor/obj/SoapyCryptor.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoapyCryptor/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/SoapyCryptor/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoapyCryptor/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/SoapyCryptor/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoapyCryptor/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/SoapyCryptor/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SoapyCryptor/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/SoapyCryptor/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +68,8 @@
       <option name="presentableId" value="Default" />
       <updated>1620299134781</updated>
       <workItem from="1620299170377" duration="6597000" />
-      <workItem from="1620368712140" duration="5025000" />
+      <workItem from="1620368712140" duration="5369000" />
+      <workItem from="1620378745739" duration="2015000" />
     </task>
     <servers />
   </component>
