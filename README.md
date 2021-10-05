@@ -17,7 +17,7 @@ You will be asked to choose to encrypt or decrypt.
 
 #### Encrypting
 1. It will request the text to encrypt.
-2. It will output the encrypted string and a dictionary, this will be used as a key for decryption.=
+2. It will output the encrypted string and a dictionary, this will be used as a key for decryption.
 
 #### Decrypting
 1. It will request the dictionary (key).
